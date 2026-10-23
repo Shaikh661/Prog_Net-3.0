@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f"><meta name="description" content="A playful browser-game archive concept featuring a gaming cat.">
+  <title>Catcade — Play classic games</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Catcade home"><span class="brand-mark">◈</span><span>CAT<span class="brand-accent">CADE</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#collection">Collection</a><a href="#featured">Featured</a><a href="#pc-games">PC games</a><a href="#flash-games">Flash games</a></nav>
+    <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="gameSearch" type="search" placeholder="Search games..." aria-label="Search games"><kbd> / </kbd></label>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> YOUR NEXT GAME IS HERE</div><h1>Play classic games.<br><span>No downloads. Just fun.</span></h1><p>A whole arcade in your browser. Pick a classic, settle in, and let the nostalgia load.</p><div class="hero-actions"><a class="btn btn-primary" href="#featured">Explore games <span>↗</span></a><a class="btn btn-quiet" href="#collection">Browse collection <span>↓</span></a></div><div class="hero-stats"><div><strong>533</strong><span>games to explore</span></div><i></i><div><strong>5</strong><span>game collections</span></div><i></i><div><strong>0</strong><span>installs needed</span></div></div></div>
+      <div class="hero-art"><div class="art-glow"></div><div class="art-frame"><img src="assets/cat-gamer.jpg" alt="Orange cat wearing gaming headphones at a computer"><div class="art-label"><span class="tiny-dot"></span> PLAYER ONE IS READY <span class="pixel">▦</span></div></div><div class="floating-chip chip-top">✦ PLAYER 01</div><div class="floating-chip chip-bottom"><span>▶</span> GAME ON</div></div>
+    </section>
+    <section class="collection section" id="collection"><div class="section-heading"><div><div class="eyebrow">THE COLLECTION</div><h2>Pick your playground<span>.</span></h2></div><a class="text-link" href="#featured">Explore all games <span>↗</span></a></div>
+      <div class="category-grid">
+        <a class="category-card" href="#pc-games"><span class="cat-icon">▣</span><span class="cat-text"><strong>PC games</strong><small>Full 3D adventures</small></span><span class="count">05</span><span class="arrow">↗</span></a>
+        <a class="category-card" href="#neo-geo"><span class="cat-icon">✦</span><span class="cat-text"><strong>Neo Geo</strong><small>Fighters & run-and-guns</small></span><span class="count">90</span><span class="arrow">↗</span></a>
+        <a class="category-card" href="#capcom"><span class="cat-icon">◉</span><span class="cat-text"><strong>Capcom arcade</strong><small>Arcade legends</small></span><span class="count">62</span><span class="arrow">↗</span></a>
+        <a class="category-card" href="#arcade-classics"><span class="cat-icon">▤</span><span class="cat-text"><strong>Arcade classics</strong><small>Old-school favorites</small></span><span class="count">75</span><span class="arrow">↗</span></a>
+        <a class="category-card" href="#flash-games"><span class="cat-icon">ϟ</span><span class="cat-text"><strong>Flash games</strong><small>Browser-era classics</small></span><span class="count">301</span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+    <section class="section" id="featured"><div class="section-heading"><div><div class="eyebrow">CURATED FOR YOU</div><h2>Start here<span>.</span></h2><p class="section-subtitle">A few legendary picks to get you going.</p></div><div class="carousel-controls"><button id="prevGames" aria-label="Previous games">←</button><button id="nextGames" aria-label="Next games">→</button></div></div><div class="game-grid" id="startGames"></div></section>
+    <section class="feature-banner"><div class="banner-copy"><div class="eyebrow">THE CLASSICS NEVER LEFT</div><h2>Old-school games.<br><span>New-school convenience.</span></h2><p>From arcade fighters to big open worlds, find a favorite and jump right in.</p><a class="btn btn-primary" href="#pc-games">Find your next game <span>↗</span></a></div><img src="assets/cat-gamer.jpg" alt="Gaming cat featured artwork" loading="lazy"></section>
+    <section class="section game-section" id="pc-games"><div class="section-heading"><div><div class="eyebrow">BIG WORLDS, SMALL WAIT</div><h2>PC games<span>.</span></h2><p class="section-subtitle">Full 3D games, running in your browser.</p></div><a class="text-link" href="#pc-games">View collection <span>↗</span></a></div><div class="game-grid" data-games="pc"></div></section>
+    <section class="section game-section" id="neo-geo"><div class="section-heading"><div><div class="eyebrow">FIGHTERS & RUN-AND-GUNS</div><h2>Neo Geo<span>.</span></h2></div><a class="text-link" href="#neo-geo">View collection <span>↗</span></a></div><div class="game-grid" data-games="neo"></div></section>
+    <section class="section game-section" id="capcom"><div class="section-heading"><div><div class="eyebrow">ARCADE ICONS</div><h2>Capcom arcade<span>.</span></h2></div><a class="text-link" href="#capcom">View collection <span>↗</span></a></div><div class="game-grid" data-games="capcom"></div></section>
+    <section class="section game-section" id="arcade-classics"><div class="section-heading"><div><div class="eyebrow">INSERT COIN, REPEAT</div><h2>Arcade classics<span>.</span></h2></div><a class="text-link" href="#arcade-classics">View collection <span>↗</span></a></div><div class="game-grid" data-games="arcade"></div></section>
+    <section class="section game-section" id="flash-games"><div class="section-heading"><div><div class="eyebrow">A LITTLE INTERNET NOSTALGIA</div><h2>Flash games<span>.</span></h2></div><a class="text-link" href="#flash-games">View collection <span>↗</span></a></div><div class="game-grid" data-games="flash"></div></section>
+    <section class="no-results" id="noResults" hidden><div>⌕</div><h3>No games found</h3><p>Try another title or clear your search.</p><button class="btn btn-primary" id="clearSearch">Clear search</button></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">◈</span><span>CAT<span class="brand-accent">CADE</span></span></a><p>A little nostalgia, with a cat at the controls.</p><a href="#top" class="back-top">Back to top ↑</a><small>Demo homepage concept. Game cards are illustrative and do not launch the original games.</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body></html>
