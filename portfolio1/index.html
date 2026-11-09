@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="The official Prog-Net 3.0 documentation: its story, people, products, development, and future direction." />
+    <title>Prog-Net 3.0 Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Prog-Net documentation home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>prog-net<span class="brand-version">3.0</span></span>
+      </a>
+      <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="sidebar">
+        <span class="sr-only">Open documentation navigation</span><span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="global-nav" aria-label="Main navigation">
+        <a href="?page=chronicle/beginning">The Chronicle</a>
+        <a href="?page=people/founding-team">The People</a>
+        <a href="?page=products">Our Products</a>
+        <a href="?page=development/technology-stack">Development</a>
+        <a href="?page=road-ahead/future-vision">The Road Ahead</a>
+      </nav>
+      <a class="top-about" href="?page=about">About <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="docs-frame">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <div class="sidebar-tools">
+          <label class="search-box">
+            <svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="8.7" cy="8.7" r="5.8"></circle><path d="m13 13 4 4"></path></svg>
+            <input id="docs-search" type="search" placeholder="Search documentation" autocomplete="off" aria-label="Search documentation" aria-controls="search-results" aria-autocomplete="list" aria-expanded="false" />
+            <kbd>Ctrl K</kbd>
+          </label>
+          <div class="search-results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+        </div>
+        <nav class="side-nav" id="side-nav" aria-label="Page contents"></nav>
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <span>Documentation is evolving</span>
+          <a href="?page=road-ahead/development-roadmap" aria-label="View development roadmap">↗</a>
+        </div>
+      </aside>
+
+      <main class="doc-main" id="main-content" tabindex="-1">
+        <div class="mobile-backdrop" id="mobile-backdrop" hidden></div>
+        <article id="page-content" aria-live="polite"></article>
+        <footer class="doc-footer">
+          <a class="footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">P</span> Prog-Net 3.0</a>
+          <p>Documentation for the journey, the work, and what comes next.</p>
+          <div class="footer-links">
+            <a href="?page=chronicle/beginning">Chronicle</a>
+            <a href="?page=products">Products</a>
+            <a href="?page=development/technology-stack">Development</a>
+            <a href="?page=about">About</a>
+          </div>
+          <span class="copyright">© <span id="current-year"></span> Prog-Net</span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

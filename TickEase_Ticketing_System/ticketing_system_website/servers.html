@@ -1,145 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Server Info | ProgTick</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Info | TickEase</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="app-shell">
-        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">T</span><span>Tick<span
-                        class="brand-light">Ease</span><small>SMART TICKETING</small></span></a>
-            <div class="side-label">WORKSPACE</div>
-            <nav class="nav-links"><a class="nav-link" href="index.html"><span>▦</span> Dashboard</a><a class="nav-link"
-                    href="tickets.html"><span>▤</span> All Tickets <b class="nav-count">8</b></a><a class="nav-link"
-                    href="create-ticket.html"><span>＋</span> Create Ticket</a><a class="nav-link active"
-                    href="servers.html"><span>◈</span> Server Info</a></nav>
-            <div class="side-label team-label">TEAM</div><a class="nav-link" href="profile.html"><span>♙</span> My
-                Profile</a>
-            <div class="sidebar-bottom">
-                <div class="help-card">
-                    <div class="help-icon">✦</div><strong>Need a hand?</strong>
-                    <p>Check your tickets or create a new request.</p><a href="create-ticket.html">Get support →</a>
-                </div>
-                <div class="user-mini">
-                    <div class="avatar">MM</div>
-                    <div><strong>Mohib</strong><small>Project Admin</small></div><a href="profile.html">⋯</a>
-                </div>
-            </div>
-        </aside>
-        <main class="main-content">
-            <header class="topbar">
-                <div class="mobile-brand">TickEase</div>
-                <div class="breadcrumb">Workspace <span>/</span> <strong>Server Info</strong></div>
-                <div class="top-actions"><span class="status-dot"></span><span class="online-text">System
-                        operational</span>
-                    <div class="avatar small-avatar">M</div>
-                </div>
-            </header>
-            <section class="page-wrap">
-                <div class="welcome-row">
-                    <div>
-                        <p class="eyebrow">INFRASTRUCTURE</p>
-                        <h1>Server information</h1>
-                        <p class="subheading">Monitor connected servers and quickly spot anything that needs attention.
-                        </p>
-                    </div><button id="refreshServers" class="outline-btn">↻ Refresh status</button>
-                </div>
-                <div class="stats-grid compact-stats">
-                    <article class="stat-card simple-stat">
-                        <p>Registered servers</p>
-                        <div class="stat-number">5</div><small>Across the network</small>
-                    </article>
-                    <article class="stat-card simple-stat">
-                        <p>Online</p>
-                        <div class="stat-number green-number">4</div><small>Running normally</small>
-                    </article>
-                    <article class="stat-card simple-stat">
-                        <p>Needs review</p>
-                        <div class="stat-number orange-number">1</div><small>Maintenance mode</small>
-                    </article>
-                    <article class="stat-card simple-stat">
-                        <p>Network health</p>
-                        <div class="stat-number">80%</div><small>Overall availability</small>
-                    </article>
-                </div>
-                <section class="server-cards">
-                    <article class="server-detail-card">
-                        <div class="server-card-head"><span class="server-symbol large-symbol">SA</span><span
-                                class="server-pill online">● Online</span></div>
-                        <h2>Server Alpha</h2>
-                        <p class="server-address">192.168.1.10</p>
-                        <div class="server-metrics">
-                            <div><small>CPU usage</small><strong>24%</strong></div>
-                            <div><small>Memory</small><strong>48%</strong></div>
+    <body>
+        <div class="app-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><span class="brand-mark">T</span
+                    ><span
+                        >Tick<span class="brand-light">Ease</span
+                        ><small>SMART TICKETING</small></span
+                    ></a
+                >
+                <div class="side-label">WORKSPACE</div>
+                <nav class="nav-links">
+                    <a class="nav-link" href="index.html"
+                        ><span>▦</span> Dashboard</a
+                    ><a class="nav-link" href="tickets.html"
+                        ><span>▤</span> All Tickets
+                        <b class="nav-count">8</b></a
+                    ><a class="nav-link" href="create-ticket.html"
+                        ><span>＋</span> Create Ticket</a
+                    ><a class="nav-link active" href="servers.html"
+                        ><span>◈</span> Server Info</a
+                    >
+                </nav>
+                <div class="side-label team-label">TEAM</div>
+                <a class="nav-link" href="profile.html"
+                    ><span>♙</span> My Profile</a
+                >
+                <div class="sidebar-bottom">
+                    <div class="help-card">
+                        <div class="help-icon">✦</div>
+                        <strong>Need a hand?</strong>
+                        <p>Check your tickets or create a new request.</p>
+                        <a href="create-ticket.html">Get support →</a>
+                    </div>
+                    <div class="user-mini">
+                        <div class="avatar">MM</div>
+                        <div>
+                            <strong>Mohib</strong><small>Project Admin</small>
                         </div>
-                        <div class="metric-line"><span style="width:24%"></span></div>
-                        <div class="server-card-foot"><span>Last checked: just now</span><span
-                                class="healthy-text">Healthy</span></div>
-                    </article>
-                    <article class="server-detail-card">
-                        <div class="server-card-head"><span class="server-symbol large-symbol">SB</span><span
-                                class="server-pill online">● Online</span></div>
-                        <h2>Server Beta</h2>
-                        <p class="server-address">192.168.1.11</p>
-                        <div class="server-metrics">
-                            <div><small>CPU usage</small><strong>39%</strong></div>
-                            <div><small>Memory</small><strong>62%</strong></div>
+                        <a href="profile.html">⋯</a>
+                    </div>
+                </div>
+            </aside>
+            <main class="main-content">
+                <header class="topbar">
+                    <div class="mobile-brand">ProgTick</div>
+                    <div class="breadcrumb">
+                        Workspace <span>/</span> <strong>Server Info</strong>
+                    </div>
+                    <div class="top-actions">
+                        <span class="status-dot"></span
+                        ><span class="online-text">System operational</span>
+                        <div class="avatar small-avatar">M</div>
+                    </div>
+                </header>
+                <section class="page-wrap">
+                    <div class="welcome-row">
+                        <div>
+                            <p class="eyebrow">INFRASTRUCTURE</p>
+                            <h1>Server information</h1>
+                            <p class="subheading">
+                                Monitor connected servers and quickly spot
+                                anything that needs attention.
+                            </p>
                         </div>
-                        <div class="metric-line"><span style="width:39%"></span></div>
-                        <div class="server-card-foot"><span>Last checked: just now</span><span
-                                class="healthy-text">Healthy</span></div>
-                    </article>
-                    <article class="server-detail-card">
-                        <div class="server-card-head"><span class="server-symbol large-symbol">SC</span><span
-                                class="server-pill maintenance">● Review</span></div>
-                        <h2>Server Charlie</h2>
-                        <p class="server-address">192.168.1.12</p>
-                        <div class="server-metrics">
-                            <div><small>CPU usage</small><strong>78%</strong></div>
-                            <div><small>Memory</small><strong>86%</strong></div>
-                        </div>
-                        <div class="metric-line warning-line"><span style="width:78%"></span></div>
-                        <div class="server-card-foot"><span>Last checked: 3 min ago</span><span
-                                class="warning-text">High usage</span></div>
-                    </article>
-                    <article class="server-detail-card">
-                        <div class="server-card-head"><span class="server-symbol large-symbol">SD</span><span
-                                class="server-pill online">● Online</span></div>
-                        <h2>Server Delta</h2>
-                        <p class="server-address">192.168.1.13</p>
-                        <div class="server-metrics">
-                            <div><small>CPU usage</small><strong>18%</strong></div>
-                            <div><small>Memory</small><strong>41%</strong></div>
-                        </div>
-                        <div class="metric-line"><span style="width:18%"></span></div>
-                        <div class="server-card-foot"><span>Last checked: just now</span><span
-                                class="healthy-text">Healthy</span></div>
-                    </article>
-                    <article class="server-detail-card">
-                        <div class="server-card-head"><span class="server-symbol large-symbol">SE</span><span
-                                class="server-pill online">● Online</span></div>
-                        <h2>Server Echo</h2>
-                        <p class="server-address">192.168.1.14</p>
-                        <div class="server-metrics">
-                            <div><small>CPU usage</small><strong>31%</strong></div>
-                            <div><small>Memory</small><strong>52%</strong></div>
-                        </div>
-                        <div class="metric-line"><span style="width:31%"></span></div>
-                        <div class="server-card-foot"><span>Last checked: just now</span><span
-                                class="healthy-text">Healthy</span></div>
-                    </article>
+                        <button id="refreshServers" class="outline-btn">
+                            ↻ Refresh status
+                        </button>
+                    </div>
+                    <div class="stats-grid compact-stats">
+                        <article class="stat-card simple-stat">
+                            <p>Registered servers</p>
+                            <div class="stat-number">5</div>
+                            <small>Across the network</small>
+                        </article>
+                        <article class="stat-card simple-stat">
+                            <p>Online</p>
+                            <div class="stat-number green-number">4</div>
+                            <small>Running normally</small>
+                        </article>
+                        <article class="stat-card simple-stat">
+                            <p>Needs review</p>
+                            <div class="stat-number orange-number">1</div>
+                            <small>Maintenance mode</small>
+                        </article>
+                        <article class="stat-card simple-stat">
+                            <p>Network health</p>
+                            <div class="stat-number">80%</div>
+                            <small>Overall availability</small>
+                        </article>
+                    </div>
+                    <section class="server-cards">
+                        <article class="server-detail-card">
+                            <div class="server-card-head">
+                                <span class="server-symbol large-symbol"
+                                    >SA</span
+                                ><span class="server-pill online"
+                                    >● Online</span
+                                >
+                            </div>
+                            <h2>Server Alpha</h2>
+                            <p class="server-address">192.168.1.10</p>
+                            <div class="server-metrics">
+                                <div>
+                                    <small>CPU usage</small><strong>24%</strong>
+                                </div>
+                                <div>
+                                    <small>Memory</small><strong>48%</strong>
+                                </div>
+                            </div>
+                            <div class="metric-line">
+                                <span style="width: 24%"></span>
+                            </div>
+                            <div class="server-card-foot">
+                                <span>Last checked: just now</span
+                                ><span class="healthy-text">Healthy</span>
+                            </div>
+                        </article>
+                        <article class="server-detail-card">
+                            <div class="server-card-head">
+                                <span class="server-symbol large-symbol"
+                                    >SB</span
+                                ><span class="server-pill online"
+                                    >● Online</span
+                                >
+                            </div>
+                            <h2>Server Beta</h2>
+                            <p class="server-address">192.168.1.11</p>
+                            <div class="server-metrics">
+                                <div>
+                                    <small>CPU usage</small><strong>39%</strong>
+                                </div>
+                                <div>
+                                    <small>Memory</small><strong>62%</strong>
+                                </div>
+                            </div>
+                            <div class="metric-line">
+                                <span style="width: 39%"></span>
+                            </div>
+                            <div class="server-card-foot">
+                                <span>Last checked: just now</span
+                                ><span class="healthy-text">Healthy</span>
+                            </div>
+                        </article>
+                        <article class="server-detail-card">
+                            <div class="server-card-head">
+                                <span class="server-symbol large-symbol"
+                                    >SC</span
+                                ><span class="server-pill maintenance"
+                                    >● Review</span
+                                >
+                            </div>
+                            <h2>Server Charlie</h2>
+                            <p class="server-address">192.168.1.12</p>
+                            <div class="server-metrics">
+                                <div>
+                                    <small>CPU usage</small><strong>78%</strong>
+                                </div>
+                                <div>
+                                    <small>Memory</small><strong>86%</strong>
+                                </div>
+                            </div>
+                            <div class="metric-line warning-line">
+                                <span style="width: 78%"></span>
+                            </div>
+                            <div class="server-card-foot">
+                                <span>Last checked: 3 min ago</span
+                                ><span class="warning-text">High usage</span>
+                            </div>
+                        </article>
+                        <article class="server-detail-card">
+                            <div class="server-card-head">
+                                <span class="server-symbol large-symbol"
+                                    >SD</span
+                                ><span class="server-pill online"
+                                    >● Online</span
+                                >
+                            </div>
+                            <h2>Server Delta</h2>
+                            <p class="server-address">192.168.1.13</p>
+                            <div class="server-metrics">
+                                <div>
+                                    <small>CPU usage</small><strong>18%</strong>
+                                </div>
+                                <div>
+                                    <small>Memory</small><strong>41%</strong>
+                                </div>
+                            </div>
+                            <div class="metric-line">
+                                <span style="width: 18%"></span>
+                            </div>
+                            <div class="server-card-foot">
+                                <span>Last checked: just now</span
+                                ><span class="healthy-text">Healthy</span>
+                            </div>
+                        </article>
+                        <article class="server-detail-card">
+                            <div class="server-card-head">
+                                <span class="server-symbol large-symbol"
+                                    >SE</span
+                                ><span class="server-pill online"
+                                    >● Online</span
+                                >
+                            </div>
+                            <h2>Server Echo</h2>
+                            <p class="server-address">192.168.1.14</p>
+                            <div class="server-metrics">
+                                <div>
+                                    <small>CPU usage</small><strong>31%</strong>
+                                </div>
+                                <div>
+                                    <small>Memory</small><strong>52%</strong>
+                                </div>
+                            </div>
+                            <div class="metric-line">
+                                <span style="width: 31%"></span>
+                            </div>
+                            <div class="server-card-foot">
+                                <span>Last checked: just now</span
+                                ><span class="healthy-text">Healthy</span>
+                            </div>
+                        </article>
+                    </section>
+                    <p id="refreshMessage" class="refresh-message hidden">
+                        ✓ Demo status refreshed just now.
+                    </p>
+                    <footer class="footer">
+                        © 2026 ProgTick Ticketing System
+                        <span>Made for faster support · <b>v1.0</b></span>
+                    </footer>
                 </section>
-                <p id="refreshMessage" class="refresh-message hidden">✓ Demo status refreshed just now.</p>
-                <footer class="footer">© 2026 TickEase Ticketing System <span>Made for faster support ·
-                        <b>v1.0</b></span></footer>
-            </section>
-        </main>
-    </div>
-    <script src="script.js"></script>
-</body>
-
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

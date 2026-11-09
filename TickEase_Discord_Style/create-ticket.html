@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create Ticket | ProgTick</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="app-shell">
+            <aside class="sidebar">
+                <a class="brand" href="index.html"
+                    ><span class="brand-mark">T</span
+                    ><span class="brand-name"
+                        >Tick<span class="brand-light">Ease</span
+                        ><small>SMART TICKETING</small></span
+                    ></a
+                >
+                <div class="side-label">WORKSPACE</div>
+                <nav class="nav-links">
+                    <a class="nav-link" href="index.html"
+                        ><span class="nav-icon">▦</span
+                        ><span class="nav-text">Dashboard</span></a
+                    ><a class="nav-link" href="tickets.html"
+                        ><span class="nav-icon">▤</span
+                        ><span class="nav-text">All Tickets</span
+                        ><b class="nav-count" id="navTicketCount">0</b></a
+                    ><a class="nav-link active" href="create-ticket.html"
+                        ><span class="nav-icon">＋</span
+                        ><span class="nav-text">Create Ticket</span></a
+                    >
+                </nav>
+                <div class="ticket-list-heading">
+                    <span>YOUR TICKETS</span
+                    ><a href="create-ticket.html" title="Create ticket">＋</a>
+                </div>
+                <div class="sidebar-ticket-list" id="sidebarTicketList">
+                    <div class="sidebar-empty">
+                        No tickets yet. Create your first ticket.
+                    </div>
+                </div>
+                <div class="sidebar-bottom">
+                    <a class="user-mini" href="profile.html"
+                        ><div class="avatar" id="sidebarAvatar">M</div>
+                        <div class="user-mini-copy">
+                            <strong id="sidebarUserName">Mohib</strong
+                            ><small
+                                ><i class="online-indicator"></i> Online ·
+                                Project Admin</small
+                            >
+                        </div>
+                        <span class="profile-settings" title="Profile settings"
+                            >⚙</span
+                        ></a
+                    >
+                </div>
+            </aside>
+            <main class="main-content">
+                <header class="topbar">
+                    <div class="mobile-brand">ProgTick</div>
+                    <div class="breadcrumb">
+                        Workspace <span>/</span> <strong>Create Ticket</strong>
+                    </div>
+                    <div class="top-actions">
+                        <span class="status-dot"></span
+                        ><span class="online-text">System operational</span>
+                        <div class="avatar small-avatar">MM</div>
+                    </div>
+                </header>
+                <section class="page-wrap">
+                    <div class="welcome-row">
+                        <div>
+                            <p class="eyebrow">SUPPORT CENTER</p>
+                            <h1>Create a ticket</h1>
+                            <p class="subheading">
+                                Tell us what you need help with. We’ll route it
+                                to the right team.
+                            </p>
+                        </div>
+                        <a class="outline-btn" href="tickets.html"
+                            >← Back to tickets</a
+                        >
+                    </div>
+                    <div class="form-layout">
+                        <section class="panel form-panel">
+                            <div class="panel-heading">
+                                <div>
+                                    <h2>Ticket details</h2>
+                                    <p>Fields marked with * are required.</p>
+                                </div>
+                                <span class="form-step">STEP 1 OF 1</span>
+                            </div>
+                            <form id="ticketForm">
+                                <div class="form-grid">
+                                    <div class="form-field full-field">
+                                        <label for="subject"
+                                            >Ticket subject *</label
+                                        ><input
+                                            id="subject"
+                                            name="subject"
+                                            required
+                                            placeholder="e.g. Unable to connect to server"
+                                        /><small
+                                            >Give your request a short, clear
+                                            title.</small
+                                        >
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="category">Category *</label
+                                        ><select
+                                            id="category"
+                                            name="category"
+                                            required
+                                        >
+                                            <option value="">
+                                                Choose category
+                                            </option>
+                                            <option>Technical Support</option>
+                                            <option>Account & Login</option>
+                                            <option>Hardware</option>
+                                            <option>Software</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="priority">Priority *</label
+                                        ><select
+                                            id="priority"
+                                            name="priority"
+                                            required
+                                        >
+                                            <option value="">
+                                                Choose priority
+                                            </option>
+                                            <option>Low</option>
+                                            <option selected>Medium</option>
+                                            <option>High</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field full-field">
+                                        <label for="description"
+                                            >Description *</label
+                                        ><textarea
+                                            id="description"
+                                            name="description"
+                                            rows="5"
+                                            required
+                                            placeholder="Describe the issue and what you have tried so far..."
+                                        ></textarea
+                                        ><small
+                                            >Include enough details so the
+                                            support team can help
+                                            quickly.</small
+                                        >
+                                    </div>
+                                </div>
+                                <div class="form-footer">
+                                    <span class="privacy-note"
+                                        >🔒 Your request will be visible to the
+                                        support team.</span
+                                    >
+                                    <div>
+                                        <button
+                                            type="reset"
+                                            class="outline-btn"
+                                        >
+                                            Clear form
+                                        </button>
+                                        <button
+                                            type="submit"
+                                            class="primary-btn"
+                                        >
+                                            Submit ticket ↗
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div
+                                id="successMessage"
+                                class="success-message hidden"
+                            >
+                                <span>✓</span>
+                                <div>
+                                    <strong
+                                        >Ticket created successfully!</strong
+                                    >
+                                    <p>
+                                        Your demo ticket has been added to the
+                                        page. You can create another one or view
+                                        all tickets.
+                                    </p>
+                                    <a href="tickets.html"
+                                        >Go to all tickets →</a
+                                    >
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="panel tips-panel">
+                            <div class="tips-icon">✦</div>
+                            <h2>Tips for a faster fix</h2>
+                            <p>
+                                A little detail goes a long way. Help your
+                                support team understand the issue.
+                            </p>
+                            <div class="tip-row">
+                                <span>01</span>
+                                <div>
+                                    <strong>Use a clear title</strong>
+                                    <p>
+                                        Summarize the problem in one sentence.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tip-row">
+                                <span>02</span>
+                                <div>
+                                    <strong>Choose the right priority</strong>
+                                    <p>Mark urgent issues as high priority.</p>
+                                </div>
+                            </div>
+                            <div class="tip-row">
+                                <span>03</span>
+                                <div>
+                                    <strong>Explain the issue</strong>
+                                    <p>
+                                        Include error messages and steps to
+                                        repeat it.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="response-box">
+                                <span>⏱</span>
+                                <div>
+                                    <strong>Typical response time</strong>
+                                    <p>Within 1 business day</p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <footer class="footer">
+                        © 2026 ProgTick Ticketing System
+                        <span>Made for faster support · <b>v1.0</b></span>
+                    </footer>
+                </section>
+            </main>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
